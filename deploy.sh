@@ -8,7 +8,7 @@ npm run build
 echo "Deploying files to server..."
 cd build
 # scp -r -O * abuser@116.203.235.59:/home/abuser/contact-app/
-scp -r -O * abuser@116.203.235.59:/home/abuser/store/client/
+scp -r -O * abuser@116.203.235.59:/home/abuser/shop-msx/client/
 
  
 echo "Done!"
