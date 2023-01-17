@@ -1,32 +1,20 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Shop from "./components/Shop";
-import Example from "./components/Example";
-import Main from "./components/Main";
-import { Switch, Route, Redirect } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import { Switch, Route } from "react-router-dom";
+import AllProducts from "./pages/AllProducts";
+import ProductDetails from "./components/Products/ProductDetails";
 
 function App() {
   return (
-    <div>
-      <div>fdvsrve</div>
+    <Layout>
       <Switch>
         <Route path="/" exact>
-          <Main></Main>
+          <AllProducts></AllProducts>
         </Route>
-        <Route path="/shop" exact>
-          <Shop></Shop>
-        </Route>
-        <Route path="/timer">
-          <Example></Example>
-        </Route>
-
-        <Route path="/api">
-
-          
-          <div>timer</div>
+        <Route path="/details" exact>
+          <ProductDetails></ProductDetails>
         </Route>
       </Switch>
-    </div>
+     </Layout>
   );
 }
 

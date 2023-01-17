@@ -1,0 +1,58 @@
+
+@font-face {
+  font-family: "Varela Round";   /*Can be any text*/
+  src: local("Varela Round"),
+    url("./../../../fonts/VarelaRound-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";   /*Can be any text*/
+  src: local("OpenSans"),
+    url("./../../../fonts/OpenSans-VariableFont_wdth\,wght.ttf") format("truetype");
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    background-color: #23426a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+  }
+
+  h2 {
+    font-family: 'Varela Round';
+    padding-top: 16px;
+    margin-bottom: 2px;
+  }
+
+  p {
+    font-family: 'OpenSans';
+    font-size: 13px;
+    margin-left: 1rem;
+  }
+  
+  .icon {
+    width: 4rem;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .leftHeader {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+  }

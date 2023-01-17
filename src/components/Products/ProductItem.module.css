@@ -1,0 +1,13 @@
+
+.productItem {
+    margin: 10px 10px;
+    text-decoration: none;
+    background-color: rgb(196, 138, 138);
+    border: 1px solid rgba(128, 128, 128, 0.24);
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 7px #363236;
+    width: 250px;
+    height: 250px;
+  }
+  
