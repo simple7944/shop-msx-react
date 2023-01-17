@@ -10,7 +10,7 @@ const ProductDetails = () => {
   return (
     <PhotoProvider>
       {imgs.map((img) => (
-        <PhotoView src={img} key={img}>
+        <PhotoView src={img} key={(Math.random() + 1).toString(36).substring(7)}>
           <img src={img} alt="" />
         </PhotoView>
       ))}

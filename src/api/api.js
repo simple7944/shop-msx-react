@@ -1,5 +1,5 @@
 export async function getAllProducts() {
-    const response = await fetch(`/admin/products`);
+    const response = await fetch(`/api/admin/products`);
     const data = await response.json();
   
     if (!response.ok) {

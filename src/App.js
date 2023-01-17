@@ -1,7 +1,7 @@
 import Layout from "./components/layout/Layout";
 import { Switch, Route } from "react-router-dom";
 import AllProducts from "./pages/AllProducts";
-import ProductDetails from "./components/Products/ProductDetails";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (
