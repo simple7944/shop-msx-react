@@ -32,7 +32,7 @@ console.log(loadedProducts)
 
   return (
     <div>
-      <ProductList products={loadedProducts}></ProductList>
+      <ProductList key="productList" products={loadedProducts}></ProductList>
     </div>
   );
 };

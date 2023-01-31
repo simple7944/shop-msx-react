@@ -1,31 +1,11 @@
 import classes from "./CategoriesButton.module.css";
 import { Dropdown } from "react-bootstrap";
-import CartIcon from "../../../cart/CartIcon";
-import { useEffect } from "react";
-import { getAllProducts } from "../../../../api/api";
-import useHttp from "../../../../hooks/use-http";
 
 const CategoriesButton = () => {
-  const {
-    sendRequest,
-    status,
-    data: loadedProducts,
-    error,
-  } = useHttp(getAllProducts, true);
-
-  useEffect(() => {
-    sendRequest();
-  }, [sendRequest]);
-
-  let categoty = "null";
-
-  if (loadedProducts) {
-    categoty = loadedProducts[0].name;
-  }
 
   return (
     <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
+      <Dropdown.Toggle className={classes.cb} variant="success" id="dropdown-basic">
         Каталог товаров
       </Dropdown.Toggle>
 
@@ -33,7 +13,7 @@ const CategoriesButton = () => {
         <Dropdown.Item href="/products">
           <CategoryButton name="аксесуары trgkjnlknlk"></CategoryButton>
         </Dropdown.Item>
-        <Dropdown.Item href="/add">{categoty}</Dropdown.Item>
+        <Dropdown.Item href="/add">feer</Dropdown.Item>
         <Dropdown.Item href="#/action-3">консоли</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

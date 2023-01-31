@@ -46,3 +46,9 @@
     height: 1.35rem;
     margin-right: 0.5rem;
   }
+
+  .cb {
+    background:#5F6769 !important;
+    color:#fff !important;
+    border-color: #5F6769 !important;
+  }
