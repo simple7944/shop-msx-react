@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 
-import CartIcon from '../../../cart/CartIcon';
+import CartIcon from '../../../Icons/CartIcon';
 // import CartContext from '../../store/cart-context';
 import classes from './HeaderCartButton.module.css';
 
@@ -32,7 +32,7 @@ const HeaderCartButton = (props) => {
   }, [items]);
 
   return (
-    <button className={btnClasses}>
+    <button className={btnClasses} onClick={props.onClick}>
       <span className={classes.icon}>
         <CartIcon />
       </span>

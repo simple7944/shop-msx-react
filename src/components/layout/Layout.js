@@ -1,13 +1,28 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from "react";
 
-import classes from './Layout.module.css';
-import NavigationBar from './header/NavigationBar';
+import classes from "./Layout.module.css";
+import NavigationBar from "./header/NavigationBar";
+import Cart from "../Cart/Cart";
+import CartProvider from "../Cart/CartProvider";
 
 const Layout = (props) => {
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsShown(true);
+  };
+
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+  };
+
   return (
     <Fragment>
-      <NavigationBar />
-      <main className={classes.main}>{props.children}</main>
+      <CartProvider>
+        {cartIsShown && <Cart onClose={hideCartHandler} />}
+        <NavigationBar openCartAction={showCartHandler}/>
+        <main className={classes.main}>{props.children}</main>
+      </CartProvider>
     </Fragment>
   );
 };

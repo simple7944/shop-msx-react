@@ -22,9 +22,7 @@ const NavigationBar = (props) => {
           </Link>
           <CategoriesButton />
         </div>
-        <Link to={`/cart`}>
-          <HeaderCartButton/>
-        </Link>
+        <HeaderCartButton onClick={props.openCartAction} />
       </header>
     </Fragment>
   );

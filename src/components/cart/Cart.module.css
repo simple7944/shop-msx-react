@@ -1,0 +1,82 @@
+.header {
+  display: flex;
+  width: 100%;
+  padding-inline: 1rem;
+  bottom: 0;
+  justify-content: space-between;
+}
+
+.title {
+    margin: auto;
+    margin-left: 0px;
+    font-family: Helvetica, Sans-Serif;
+    font-weight: 600;
+    color: rgb(57, 57, 57);
+    font-size: 16px;
+}
+
+.closeButton {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #666666;
+  border: 0px;
+  padding: 4.5px;
+}
+
+.cartItems {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 20rem;
+    overflow: auto;
+  }
+
+.footer {
+    /* background-color: royalblue; */
+}
+
+.actions {
+    display: flex;
+    width: 100%;
+    padding-inline: 1rem;
+    bottom: 0;
+    justify-content: space-between; 
+}
+
+.price {
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+    font-family: Helvetica, Sans-Serif;
+    color: rgb(57, 57, 57);
+    font-size: 24px;
+}
+
+.orderButton {
+    display: inline;
+    background-color: #719192;
+    color: #fff;
+    font-family: Helvetica, Sans-Serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 4px;
+    border: none;
+    transition-duration: 0.4s;
+}
+
+.continueButton {
+    display: inline;
+    background-color: #fff;
+    color: rgb(101, 101, 101);
+    font-family: Helvetica, Sans-Serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: rgb(101, 101, 101);
+
+    transition-duration: 0.4s;
+}

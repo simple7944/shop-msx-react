@@ -1,6 +1,6 @@
 import classes from "./ProductItem.module.css";
 import { Link } from "react-router-dom";
-import CartIcon from "../cart/CartIcon";
+import CartIcon from "../Icons/CartIcon";
 
 const ProductItem = (props) => {
   console.log(props.product)
