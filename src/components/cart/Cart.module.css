@@ -27,7 +27,7 @@
 
 .cartItems {
     list-style: none;
-    margin: 0;
+    margin-top: 1rem;
     padding: 0;
     max-height: 20rem;
     overflow: auto;
@@ -35,19 +35,19 @@
 
 .footer {
     /* background-color: royalblue; */
+    bottom: 0;
 }
 
 .actions {
     display: flex;
     width: 100%;
     padding-inline: 1rem;
-    bottom: 0;
     justify-content: space-between; 
 }
 
 .price {
-    margin-top: 1.5rem;
-    margin-bottom: 4rem;
+    margin: 1rem;
+    text-align: right;
     font-family: Helvetica, Sans-Serif;
     color: rgb(57, 57, 57);
     font-size: 24px;

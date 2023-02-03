@@ -7,7 +7,7 @@ const ProductDetails = (props) => {
 
   const buyProduct = () => {
     let product = props.product
-    product["count"] = 1
+    product.count = 1
     localStorage.setItem("cart", JSON.stringify(product));
     //убрать ненужные поля
   };

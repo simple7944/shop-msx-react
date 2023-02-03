@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  width: 100%;
+  padding-inline: 1rem;
+}
+
+.mainImage {
+  width: 4rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+}
+
+.title {
+  font-family: Helvetica, Sans-Serif;
+  color: rgb(57, 57, 57);
+  font-size: 16px;
+  margin-bottom: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 260px;
+  white-space: nowrap;
+}
+
+.price {
+  font-family: Helvetica, Sans-Serif;
+  color: rgb(57, 57, 57);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+/* cart number */
+
+.cartNumber {
+  display: flex;
+  margin: auto;
+}
+
+.addButton {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #719192;
+  border: 0px;
+  padding: 5px;
+}
