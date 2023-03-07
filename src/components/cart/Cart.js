@@ -4,14 +4,26 @@ import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
 import CloseIcon from "../Icons/CloseIcon";
 import CartItem from "./CartItem";
-
-// import CartItem from './CartItem';
-// import CartContext from '../../store/cart-context';
-// import Checkout from './Checkout';
+import { getCartItems, setCartItems } from "../../helper/LocationStorageHelper";
+import CartContext from "../Cart/context/cart-context";
+import { Link } from "react-router-dom";
 
 const Cart = (props) => {
-  let carts = [JSON.parse(localStorage.getItem("cart"))];
-console.log(carts)
+  const [carts, setCarts] = useState(getCartItems());
+  const cartCtx = useContext(CartContext);
+
+  const addQuantityCart = (product, quantity) => {
+    if (setCartItems(product, quantity)) {
+      setCarts(getCartItems());
+      cartCtx.addItem(quantity);
+    }
+  };
+
+  let totalPrice = 0;
+  for (let cart of carts) {
+    totalPrice += cart.price * cart.count;
+  }
+
   return (
     <Modal onClose={props.onClose}>
       <div className={classes.header}>
@@ -23,21 +35,29 @@ console.log(carts)
 
       <div key="cart-list" className={classes.cartItems}>
         {carts.map((cart) => (
-          <CartItem cart={cart} key={cart.id} />
+          <CartItem
+            dismissAction={props.onClose}
+            addQuantityCart={addQuantityCart}
+            cart={cart}
+            key={cart._id}
+          />
         ))}
       </div>
-
-      <div className={classes.footer}>
-        <p className={classes.price}>58654 грн</p>
-        <div className={classes.actions}>
-          <button className={classes.continueButton} onClick={props.onClose}>
-            Продолжить покупки
-          </button>
-          <button className={classes.orderButton} onClick={props.onClose}>
-            Оформить заказ
-          </button>
+      {totalPrice > 0 && (
+        <div className={classes.footer}>
+          <p className={classes.price}>{totalPrice} грн</p>
+          <div className={classes.actions}>
+            <button className={classes.continueButton} onClick={props.onClose}>
+              Продолжить покупки
+            </button>
+            <Link to={`/order`}>
+              <button className={classes.orderButton} onClick={props.onClose}>
+                Оформить заказ
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </Modal>
   );
 };

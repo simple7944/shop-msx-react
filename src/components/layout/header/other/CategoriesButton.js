@@ -10,11 +10,11 @@ const CategoriesButton = () => {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item href="/products">
+        <Dropdown.Item href="/0">
           <CategoryButton name="аксесуары trgkjnlknlk"></CategoryButton>
         </Dropdown.Item>
-        <Dropdown.Item href="/add">feer</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">консоли</Dropdown.Item>
+        <Dropdown.Item href="/1">feer</Dropdown.Item>
+        <Dropdown.Item href="/2">консоли</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

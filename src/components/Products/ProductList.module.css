@@ -4,11 +4,3 @@
   justify-content: flex-start ;
 }
 
-.filtersContainer {
-  width: 22%;
-  min-width: 14rem;
-}
-
-.container {
-  display: flex;
-}

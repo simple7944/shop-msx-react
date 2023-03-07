@@ -1,5 +1,13 @@
-export async function getAllProducts() {
-    const response = await fetch(`/api/shop/products`);
+
+export async function getAllProducts(params) {
+
+  let url = "/api/shop/products"
+
+  if (params !== "") {
+    const urlParams1 = new URLSearchParams(params).toString()
+    url += ("?" + urlParams1)
+  }
+    const response = await fetch(url);
     const data = await response.json();
   
     if (!response.ok) {

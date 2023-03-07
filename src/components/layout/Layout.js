@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 import classes from "./Layout.module.css";
 import NavigationBar from "./header/NavigationBar";
 import Cart from "../Cart/Cart";
-import CartProvider from "../Cart/CartProvider";
+import CartProvider from "../Cart/context/CartProvider";
 
 const Layout = (props) => {
   const [cartIsShown, setCartIsShown] = useState(false);
