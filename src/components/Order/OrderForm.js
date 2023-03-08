@@ -1,7 +1,9 @@
 import classes from "./OrderForm.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
+import CartContext from "../Cart/context/cart-context";
 
-const OrderForm = () => {
+const OrderForm = (props) => {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [phone, setPhone] = useState("380");
@@ -15,6 +17,9 @@ const OrderForm = () => {
   const [isValidCity, setIsValidCity] = useState(true);
   const [isValidPost, setIsValidPost] = useState(true);
   const [isValidEmail, setIsValidEmail] = useState(true);
+
+  const history = useHistory();
+  const cartCtx = useContext(CartContext);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -52,9 +57,8 @@ const OrderForm = () => {
     const isSurnameValid = surname.trim().length > 2;
     const isPhoneValid = phone.trim().length === 12;
     const isCityValid = city.trim().length > 2;
-    const isPostValid = post.trim() > 0 ;
+    const isPostValid = post > 0 ;
     const isEmailValid = /\S+@\S+\.\S+/.test(email);
-    
     setIsValidName(isNameValid);
     setIsValidSurname(isSurnameValid);
     setIsValidPhone(isPhoneValid);
@@ -62,8 +66,23 @@ const OrderForm = () => {
     setIsValidPost(isPostValid)
     setIsValidEmail(isEmailValid)
 
-    if (isNameValid && isSurnameValid && isPhoneValid && isCityValid && isValidPost) {
-      console.log("success");
+
+
+    
+    if ((isNameValid && isSurnameValid && isPhoneValid && isCityValid && isValidPost && isValidEmail)) {
+
+
+        console.log(name)
+        console.log(surname)
+        console.log(phone)
+        console.log(city)
+        console.log(post)
+        console.log(email)
+
+        props.confirmOrder(email)
+        localStorage.setItem("cart", [])
+        cartCtx.clear()
+        history.push("/")
     }
   };
 

@@ -37,3 +37,21 @@ export async function getAllProducts(params) {
   
     return loadedProduct;
   }
+
+  export async function confirmOrder(carts) {
+
+    const response = await fetch(`/api/shop/sendEmail`, {
+      body: JSON.stringify(carts),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      method: "POST"
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.message || 'Could not fetch product.');
+    }
+  
+    return data;
+  }

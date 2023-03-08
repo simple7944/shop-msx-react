@@ -44,19 +44,19 @@ const Filter = (props) => {
     if (category) {
       switch (category) {
         case "0":
-          categoryName = "Настольные компютеры";
+          categoryName = "Винтажные компьютеры";
           break;
         case "1":
-          categoryName = "Аксесуары";
+          categoryName = "Аксессуары";
           break;
         case "2":
           categoryName = "Консоли";
           break;
         case "3":
-          categoryName = "Все продукты";
+          categoryName = "Инструкции";
           break;
         case "4":
-          categoryName = "Все продукты";
+          categoryName = "Дискеты, кассеты, диски";
           break;
       }
     }

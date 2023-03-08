@@ -40,20 +40,17 @@ const AllProducts = (props) => {
       }
     }
 
-    console.log(category)
 
 
     if (category) {
       params.category = category;
     }
 
-    console.log(params);
     return params;
   };
 
   useEffect(() => {
     sendRequest(params());
-    console.log("reelll");
   }, [sendRequest, condition, category]);
 
   return (

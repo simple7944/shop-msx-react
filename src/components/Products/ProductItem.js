@@ -11,7 +11,7 @@ const ProductItem = (props) => {
 
   const buyProduct = () => {
     let product = props.product;
-    console.log(product);
+  
     if (setCartItems(product, 1)) {
       cartCtx.addItem(1);
     }
@@ -27,7 +27,7 @@ const ProductItem = (props) => {
         />
 
         <p className={classes.title}>
-          {props.product.name + props.product.name + props.product.name}
+          {props.product.name}
         </p>
       </Link>
       <div className={classes.buyContainer}>

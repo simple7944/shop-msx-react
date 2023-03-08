@@ -16,7 +16,6 @@ export function getQuantity() {
 }
 
 export function setCartItems(product, quantity) {
-    console.log(product)
   const fields = ["_id", "name", "price", "count", "images", "conditionType"];
 
   let carts = getCartItems();
